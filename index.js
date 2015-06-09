@@ -10,8 +10,12 @@ app.get('/', function(req, res) {
   res.render('home.html');
 });
 
-app.get('/portfolio', function(req, res) {
-  res.render('portfolio.html');
+app.get('/contact', function(req, res) {
+  res.render('contact.html');
+});
+
+app.get('/about', function(req, res) {
+  res.render('about.html');
 });
 
 app.listen(app.get('port'), function() {

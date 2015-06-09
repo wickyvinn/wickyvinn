@@ -1,11 +1,6 @@
-a {
-  color: black;
-}
-
-a:hover {
-  color: pink;
-}
-
+a { color: #00CC99; }
+a:hover { color: #FF00CC; }
+a:active { color: #FF00CC; }
 
 .myself {
   width: 10%;
@@ -27,7 +22,7 @@ a:hover {
   text-align: center;
 }
 
-.icons-container {
+.page-body {
   padding-top: 5%;
 }
 

@@ -4,6 +4,9 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <link href="css/main.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 
@@ -13,18 +16,16 @@
       <img class="myself" src="img/myself.jpeg">
       <div class="nav-container">
         <div class="row">
-          <span class="col-md-3"><a>HOME</a></span>
-          <span class="col-md-3"><a>ABOUT</a></span>
-          <span class="col-md-3"><a>PORTFOLIO</a></span>
-          <span class="col-md-3"><a>CONTACT</a></span>
+          <span class="col-md-4"><a href='/about'>ABOUT</a></span>
+          <span class="col-md-4"><a href='/'>PORTFOLIO</a></span>
+          <span class="col-md-4"><a href='/contact'>CONTACT</a></span>
         </div>
       </div>
-      <div class="icons-container">
-
+      <div class="page-body">
         <div class="row">
-          <span class="col-md-4"><img class="portfolio-icon" src="img/climbr-logo.png" onmouseover="this.src='/img/climbr-page.png'" onmouseout="this.src='/img/climbr-logo.png'"></span>
-          <span class="col-md-4"><img class="portfolio-icon" src="img/secret-santa-logo-2.png" onmouseover="this.src='/img/secret-santa-page-2.png'" onmouseout="this.src='/img/secret-santa-logo-2.png'"></span>
-          <span class="col-md-4"><img class="portfolio-icon" src="img/pink-heart.png" onmouseover="this.src='/img/wear-page.png'" onmouseout="this.src='/img/pink-heart.png'"></span>
+          <span class="col-md-4"><img class="portfolio-icon" id="climbr" src="img/climbr-logo.png" onmouseover="this.src='/img/climbr-page.png'" onmouseout="this.src='/img/climbr-logo.png'"></span>
+          <span class="col-md-4"><img class="portfolio-icon" id="secret-santa" src="img/secret-santa-logo-2.png" onmouseover="this.src='/img/secret-santa-page-2.png'" onmouseout="this.src='/img/secret-santa-logo-2.png'"></span>
+          <span class="col-md-4"><img class="portfolio-icon" id="daftowear" src="img/pink-heart.png" onmouseover="this.src='/img/wear-page.png'" onmouseout="this.src='/img/pink-heart.png'"></span>
         </div>
 
         <div class="row">
@@ -34,8 +35,60 @@
         </div>
 
       </div>
+
+
+  </div>
+
+
+
+  <div class="modal fade" id="modal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"><span id="title"></span></h4>
+        </div>
+        <div class="modal-body">
+          <div id="technologies"></div>
+          <br><div id="description"></div>
+          <br><a id="link"></a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
   </div>
+
+<script>
+
+  $("#climbr").click(function() {
+    $('#title').html('Climbr - tindr for rock climbers.');
+    $('#technologies').html('javascript | node.js | mongodb | jquery | ajax | heroku');
+    $('#description').html("A cross-platform app. A tindr for rock climbers, of sorts - a GPS-based matching program that matches climbers in the area with other climbers who need a someone to climb with.");
+    $('#link').attr('href', 'http://climbr.herokuapp.com/').html('http://climbr.herokuapp.com/');
+    $('#modal').modal('show');
+  });
+
+  $("#secret-santa").click(function() {
+    $('#title').html('Assign secret santa among your friends!');
+    $('#technologies').html('javascript | node.js | jquery | ajax | heroku');
+    $('#description').html("A web application that allows friends to assign secret santas. It includes a random name-drawing generator and an automated email service.");
+    $('#link').attr('href', 'http://secretsantyclaus.herokuapp.com/').html('http://secretsantyclaus.herokuapp.com/');
+    $('#modal').modal('show');
+  });
+
+  $("#daftowear").click(function() {
+    $('#title').html('Figure out what you wanna wear today.');
+    $('#technologies').html('python | flask | postgres | javascript | web scraping');
+    $('#description').html("A web application. ");
+    $('#link').attr('href', 'https://github.com/wickyvinn/WhatShouldIWear').html('https://github.com/wickyvinn/WhatShouldIWear');
+    $('#modal').modal('show');
+  });
+
+</script>
+
+
 </body>
 
 </html>

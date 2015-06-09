@@ -16,7 +16,7 @@
       <img class="myself" src="img/myself.jpeg">
       <div class="nav-container">
         <div class="row">
-          <span class="col-md-3"><a href='/'>PORTFOLIO</a></span>
+          <span class="col-md-3"><a href='/'>PROJECTS</a></span>
           <span class="col-md-3"><a href='/about'>ABOUT</a></span>
           <span class="col-md-3"><a href='http://github.com/wickyvinn'>CODE</a></span>
           <span class="col-md-3"><a href='/contact'>CONTACT</a></span>
@@ -66,61 +66,73 @@
 
 <script>
   var currentIcon;
-  var previewIconsSrc;
+  var iconSrcArray;
 
-  
-    $('#right').click(function() {
-      if (currentIcon < (previewIconsSrc.length -1)) {
-        currentIcon += 1;
-        $('#preview-image').attr("src", previewIconsSrc[currentIcon])
-      };
-    });
-  
+  $('#right').click(function() {
+    if (currentIcon < (iconSrcArray.length -1)) {
+      currentIcon += 1;
+      $('#preview-image').attr("src", iconSrcArray[currentIcon])
+    };
+  });
 
-    $('#left').click(function() {
-      if (currentIcon !== 0) { 
-        currentIcon -= 1;
-        $('#preview-image').attr("src", previewIconsSrc[currentIcon])
-      };
-    });
+  $('#left').click(function() {
+    if (currentIcon !== 0) { 
+      currentIcon -= 1;
+      $('#preview-image').attr("src", iconSrcArray[currentIcon])
+    };
+  });
+
+  function populateThenShowModal(body, iconssrc) {
+    $('#title').html(body.title);
+    $('#technologies').html(body.technologies);
+    $('#description').html(body.description);
+    $('#link').html(body.link);
+
+    iconSrcArray = body.iconssrc;
+    $('#preview-image').attr("src", iconSrcArray[0])
+    currentIcon = 0;
+    $('#modal').modal('show');
+  };
 
   $("#climbr").click(function() {
-    $('#title').html('Tinder for rock climbers.');
-    $('#technologies').html('javascript | node.js | mongodb | jquery | ajax | heroku');
-    $('#description').html("A cross-platform app. A tinder for rock climbers, of sorts - a GPS-based matching program that matches climbers in the area with other climbers who need a someone to climb with. The only hooking up that happens here, though, is with a quick-draw.");
-    $('#link').html('http://climbr.herokuapp.com/');
 
-    previewIconsSrc = ['/img/climbr-page-1.png', '/img/climbr-page-2.png', '/img/climbr-page-5.png', '/img/climbr-page-3.png', '/img/climbr-page-4.png'];
-    $('#preview-image').attr("src", previewIconsSrc[0])
-    currentIcon = 0;
+    var body = {
+      'title': 'Tinder for rock climbers.',
+      'technologies':'javascript | node.js | mongodb | aws | heroku', 
+      'description': 'A cross-platform app. A tinder for rock climbers, of sorts - a GPS-based matching program that matches climbers in the area with other climbers who need a someone to climb with. The only hooking up that happens here, though, is with a quick-draw.',
+      'link': 'http://climbr.herokuapp.com/',
+      'iconssrc': ['/img/climbr-page-1.png', '/img/climbr-page-2.png', '/img/climbr-page-5.png', '/img/climbr-page-3.png', '/img/climbr-page-4.png']
+    };
 
-    $('#modal').modal('show');
+    populateThenShowModal(body, body.iconssrc);
+    
   });
 
   $("#secret-santa").click(function() {
-    $('#title').html('Assign secret santa among your friends!');
-    $('#technologies').html('javascript | node.js | jquery | ajax | heroku');
-    $('#description').html("A web application that allows friends to assign secret santas. It includes a random name-drawing generator and an automated email service.");
-    $('#link').html('http://secretsantyclaus.herokuapp.com/');
 
-    previewIconsSrc = ['/img/secret-santa-page-3.png', '/img/secret-santa-page-2.png', '/img/secret-santa-page-4.png'];
-    $('#preview-image').attr("src", previewIconsSrc[0])
-    currentIcon = 0;
+    var body = {
+      'title': 'Assign secret santa among your friends!',
+      'technologies':'javascript | node.js | jquery | ajax | heroku',
+      'description': "A web application that allows friends to assign secret santas. It includes a random name-drawing generator and an automated email service.",
+      'link': 'http://secretsantyclaus.herokuapp.com/',
+      'iconssrc':['/img/secret-santa-page-3.png', '/img/secret-santa-page-2.png', '/img/secret-santa-page-4.png']
+    };
 
-    $('#modal').modal('show');
+    populateThenShowModal(body, body.iconssrc);
   });
 
   $("#daftowear").click(function() {
-    $('#title').html('DaFShouldIWear');
-    $('#technologies').html('python | flask | postgres | javascript | web scraping');
-    $('#description').html("A web application that produces recommendations on what to wear based on style and your location's weather. You can then buy the outfit (or a variation of it that you like better) by linking to various ecommerce sites.");
-    $('#link').html('https://github.com/wickyvinn/WhatShouldIWear');
 
-    previewIconsSrc = ['/img/wear-page-2.png', '/img/wear-page.png'];
-    $('#preview-image').attr("src", previewIconsSrc[0])
-    currentIcon = 0;
+    var body = {
+      'title': 'DaFShouldIWear',
+      'technologies':'python | flask | postgres | javascript | web scraping',
+      'description': "A web application that produces recommendations on what to wear based on style and your location's weather. You can then shop pieces of the outfit (or variations of pieces that suit you better) via links provided to various ecommerce sites.",
+      'link': 'https://github.com/wickyvinn/WhatShouldIWear',
+      'iconssrc': ['/img/wear-page-2.png', '/img/wear-page.png']
+    };
 
-    $('#modal').modal('show');
+    populateThenShowModal(body, body.iconssrc);
+
   });
 
 </script>

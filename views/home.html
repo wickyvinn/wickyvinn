@@ -16,20 +16,21 @@
       <img class="myself" src="img/myself.jpeg">
       <div class="nav-container">
         <div class="row">
-          <span class="col-md-4"><a href='/about'>ABOUT</a></span>
           <span class="col-md-4"><a href='/'>PORTFOLIO</a></span>
+          <span class="col-md-4"><a href='/about'>ABOUT</a></span>
           <span class="col-md-4"><a href='/contact'>CONTACT</a></span>
+
         </div>
       </div>
       <div class="page-body">
         <div class="row">
-          <span class="col-md-4"><img class="portfolio-icon" id="climbr" src="img/climbr-logo.png" onmouseover="this.src='/img/climbr-page.png'" onmouseout="this.src='/img/climbr-logo.png'"></span>
-          <span class="col-md-4"><img class="portfolio-icon" id="secret-santa" src="img/secret-santa-logo-2.png" onmouseover="this.src='/img/secret-santa-page-2.png'" onmouseout="this.src='/img/secret-santa-logo-2.png'"></span>
-          <span class="col-md-4"><img class="portfolio-icon" id="daftowear" src="img/pink-heart.png" onmouseover="this.src='/img/wear-page.png'" onmouseout="this.src='/img/pink-heart.png'"></span>
+          <span class="col-md-4"><img class="portfolio-icon" id="climbr" src="img/climbr-logo-2.png"></span>
+          <span class="col-md-4"><img class="portfolio-icon" id="secret-santa" src="img/secret-santa-logo-2.png"></span>
+          <span class="col-md-4"><img class="portfolio-icon" id="daftowear" src="img/pink-heart.png"></span>
         </div>
 
         <div class="row">
-          <span class="col-md-4"><img class="portfolio-icon" src="img/versal-logo.png"></span>
+          <span class="col-md-4"><img class="portfolio-icon" id="daftowear" src="img/versal-logo-1.png"></span>
           <span class="col-md-4"><img class="portfolio-icon" src="img/say-on-pay.jpg"></span>
           <span class="col-md-4"><img class="portfolio-icon" src="img/woody-allen.jpg"></span>
         </div>
@@ -38,8 +39,6 @@
 
 
   </div>
-
-
 
   <div class="modal fade" id="modal" role="dialog">
     <div class="modal-dialog">
@@ -63,7 +62,7 @@
 <script>
 
   $("#climbr").click(function() {
-    $('#title').html('Climbr - tindr for rock climbers.');
+    $('#title').html('Tindr for rock climbers.');
     $('#technologies').html('javascript | node.js | mongodb | jquery | ajax | heroku');
     $('#description').html("A cross-platform app. A tindr for rock climbers, of sorts - a GPS-based matching program that matches climbers in the area with other climbers who need a someone to climb with.");
     $('#link').attr('href', 'http://climbr.herokuapp.com/').html('http://climbr.herokuapp.com/');
@@ -79,9 +78,9 @@
   });
 
   $("#daftowear").click(function() {
-    $('#title').html('Figure out what you wanna wear today.');
+    $('#title').html('DaFShouldIWear');
     $('#technologies').html('python | flask | postgres | javascript | web scraping');
-    $('#description').html("A web application. ");
+    $('#description').html("A web application that produces recommendations on what to wear based on style and your location's weather. You can then buy the outfit (or a variation of it that you like better) by linking to various ecommerce sites.");
     $('#link').attr('href', 'https://github.com/wickyvinn/WhatShouldIWear').html('https://github.com/wickyvinn/WhatShouldIWear');
     $('#modal').modal('show');
   });

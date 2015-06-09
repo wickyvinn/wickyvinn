@@ -1,0 +1,40 @@
+a {
+  color: black;
+}
+
+a:hover {
+  color: pink;
+}
+
+
+.myself {
+  width: 10%;
+  border-radius: 100%;
+}
+
+.nav-container {
+  margin-top: 2%;
+  margin-right: 20%;
+  margin-left: 20%;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.center-container {
+  margin-top: 5%;
+  margin-right: 5%;
+  margin-left: 5%;
+  text-align: center;
+}
+
+.icons-container {
+  padding-top: 5%;
+}
+
+.portfolio-icon {
+  width: 100%;
+}
+
+.row {
+  padding-top: 3%;
+}

@@ -16,9 +16,10 @@
       <img class="myself" src="img/myself.jpeg">
       <div class="nav-container">
         <div class="row">
-          <span class="col-md-4"><a href='/'>PORTFOLIO</a></span>
-          <span class="col-md-4"><a href='/about'>ABOUT</a></span>
-          <span class="col-md-4"><a href='/contact'>CONTACT</a></span>
+          <span class="col-md-3"><a href='/'>PORTFOLIO</a></span>
+          <span class="col-md-3"><a href='/about'>ABOUT</a></span>
+          <span class="col-md-3"><a href='http://github.com/wickyvinn'>CODE</a></span>
+          <span class="col-md-3"><a href='/contact'>CONTACT</a></span>
 
         </div>
       </div>
@@ -35,9 +36,10 @@
           <span class="col-md-4"><img class="portfolio-icon" src="img/woody-allen.jpg"></span>
         </div>
 
+
       </div>
-
-
+      <p>design copied from <a href="http://bobbymckenna.us/">Bobby McKenna</a> because design-illiteracy. </p>
+      
   </div>
 
   <div class="modal fade" id="modal" role="dialog">
@@ -48,24 +50,50 @@
           <h4 class="modal-title"><span id="title"></span></h4>
         </div>
         <div class="modal-body">
+          <div class="preview">
+            <a id="left" class="glyphicon glyphicon-arrow-left"></a>
+            <img id="preview-image"></img>
+            <a id="right" class="glyphicon glyphicon-arrow-right"></a>
+          
+          </div>
           <div id="technologies"></div>
           <br><div id="description"></div>
           <br><a id="link"></a>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
 
 <script>
+  var currentIcon;
+  var previewIconsSrc;
+
+  
+    $('#right').click(function() {
+      if (currentIcon < (previewIconsSrc.length -1)) {
+        currentIcon += 1;
+        $('#preview-image').attr("src", previewIconsSrc[currentIcon])
+      };
+    });
+  
+
+    $('#left').click(function() {
+      if (currentIcon !== 0) { 
+        currentIcon -= 1;
+        $('#preview-image').attr("src", previewIconsSrc[currentIcon])
+      };
+    });
 
   $("#climbr").click(function() {
-    $('#title').html('Tindr for rock climbers.');
+    $('#title').html('Tinder for rock climbers.');
     $('#technologies').html('javascript | node.js | mongodb | jquery | ajax | heroku');
-    $('#description').html("A cross-platform app. A tindr for rock climbers, of sorts - a GPS-based matching program that matches climbers in the area with other climbers who need a someone to climb with.");
-    $('#link').attr('href', 'http://climbr.herokuapp.com/').html('http://climbr.herokuapp.com/');
+    $('#description').html("A cross-platform app. A tinder for rock climbers, of sorts - a GPS-based matching program that matches climbers in the area with other climbers who need a someone to climb with. The only hooking up that happens here, though, is with a quick-draw.");
+    $('#link').html('http://climbr.herokuapp.com/');
+
+    previewIconsSrc = ['/img/climbr-page-1.png', '/img/climbr-page-2.png', '/img/climbr-page-5.png', '/img/climbr-page-3.png', '/img/climbr-page-4.png'];
+    $('#preview-image').attr("src", previewIconsSrc[0])
+    currentIcon = 0;
+
     $('#modal').modal('show');
   });
 
@@ -73,7 +101,12 @@
     $('#title').html('Assign secret santa among your friends!');
     $('#technologies').html('javascript | node.js | jquery | ajax | heroku');
     $('#description').html("A web application that allows friends to assign secret santas. It includes a random name-drawing generator and an automated email service.");
-    $('#link').attr('href', 'http://secretsantyclaus.herokuapp.com/').html('http://secretsantyclaus.herokuapp.com/');
+    $('#link').html('http://secretsantyclaus.herokuapp.com/');
+
+    previewIconsSrc = ['/img/secret-santa-page-3.png', '/img/secret-santa-page-2.png', '/img/secret-santa-page-4.png'];
+    $('#preview-image').attr("src", previewIconsSrc[0])
+    currentIcon = 0;
+
     $('#modal').modal('show');
   });
 
@@ -81,7 +114,12 @@
     $('#title').html('DaFShouldIWear');
     $('#technologies').html('python | flask | postgres | javascript | web scraping');
     $('#description').html("A web application that produces recommendations on what to wear based on style and your location's weather. You can then buy the outfit (or a variation of it that you like better) by linking to various ecommerce sites.");
-    $('#link').attr('href', 'https://github.com/wickyvinn/WhatShouldIWear').html('https://github.com/wickyvinn/WhatShouldIWear');
+    $('#link').html('https://github.com/wickyvinn/WhatShouldIWear');
+
+    previewIconsSrc = ['/img/wear-page-2.png', '/img/wear-page.png'];
+    $('#preview-image').attr("src", previewIconsSrc[0])
+    currentIcon = 0;
+
     $('#modal').modal('show');
   });
 

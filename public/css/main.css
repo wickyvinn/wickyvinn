@@ -3,7 +3,7 @@ a:hover { color: #FF00CC; }
 a:active { color: #FF00CC; }
 
 .myself {
-  width: 10%;
+  width: 12%;
   border-radius: 100%;
 }
 
@@ -16,14 +16,13 @@ a:active { color: #FF00CC; }
 }
 
 .center-container {
-  margin-top: 5%;
-  margin-right: 5%;
-  margin-left: 5%;
+  padding: 5%;
   text-align: center;
 }
 
 .page-body {
   padding-top: 3%;
+  padding-bottom: 10%;
 }
 
 .portfolio-icon {
@@ -32,11 +31,28 @@ a:active { color: #FF00CC; }
 }
 
 .portfolio-icon:hover {
-  border-width: 2px;
+  border-width: 1px;
   border-color: #00CC99;
   border-style: solid;
 }
 
 .row {
   padding-top: 3%;
+}
+
+.modal-body img {
+  width: 60%;
+  padding: 3%;
+}
+
+.preview, #technologies {
+  text-align: center;
+}
+
+#left, #right {
+  font-size: 1.5em;
+}
+
+span[class*="col-"] {
+  padding-left: 0px;
 }

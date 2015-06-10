@@ -16,11 +16,10 @@
       <img class="myself" src="img/myself.jpeg">
       <div class="nav-container">
         <div class="row">
-          <span class="col-md-3"><a href='/'>PROJECTS</a></span>
+          <span class="col-md-3"><a href='/'>WORK</a></span>
           <span class="col-md-3"><a href='/about'>ABOUT</a></span>
           <span class="col-md-3"><a href='http://github.com/wickyvinn'>CODE</a></span>
           <span class="col-md-3"><a href='/contact'>CONTACT</a></span>
-
         </div>
       </div>
       <div class="page-body">
@@ -31,14 +30,14 @@
         </div>
 
         <div class="row">
-          <span class="col-md-4"><img class="portfolio-icon" id="daftowear" src="img/versal-logo-1.png"></span>
-          <span class="col-md-4"><img class="portfolio-icon" src="img/say-on-pay.jpg"></span>
-          <span class="col-md-4"><img class="portfolio-icon" src="img/woody-allen.jpg"></span>
+          <span class="col-md-4"><img class="portfolio-icon" id="versal" src="img/versal-logo-1.png"></span>
+          <span class="col-md-4"><img class="portfolio-icon" id="gl" src="img/gl-logo.jpg"></span>
+          <span class="col-md-4"><img class="portfolio-icon" id="cal" src="img/cal-logo.png"></span>
         </div>
 
 
       </div>
-      <p>design copied from <a href="http://bobbymckenna.us/">Bobby McKenna</a> because design-illiteracy. </p>
+      <p style="font-style:italic;">design copied from <a href="http://bobbymckenna.us/">Bobby McKenna</a> because I'm design illiterate. </p>
       
   </div>
 
@@ -111,7 +110,7 @@
   $("#secret-santa").click(function() {
 
     var body = {
-      'title': 'Assign secret santa among your friends!',
+      'title': 'Assign secret santas among your friends!',
       'technologies':'javascript | node.js | jquery | ajax | heroku',
       'description': "A web application that allows friends to assign secret santas. It includes a random name-drawing generator and an automated email service.",
       'link': 'http://secretsantyclaus.herokuapp.com/',
@@ -129,6 +128,48 @@
       'description': "A web application that produces recommendations on what to wear based on style and your location's weather. You can then shop pieces of the outfit (or variations of pieces that suit you better) via links provided to various ecommerce sites.",
       'link': 'https://github.com/wickyvinn/WhatShouldIWear',
       'iconssrc': ['/img/wear-page-2.png', '/img/wear-page.png']
+    };
+
+    populateThenShowModal(body, body.iconssrc);
+
+  });
+
+  $("#versal").click(function() {
+
+    var body = {
+      'title': 'Versal: Nov 2013-2014',
+      'technologies':'scala | mysql | restful api services | unit testing',
+      'description': "Built backend services and RESTful API in scala for an online, interactive course creator. Contributed by adding RESTful endpoints, designing relational data model and identity service, and refactoring backend structure from in-memory model to sql database.",
+      'link': 'https://versal.com/',
+      'iconssrc': ['/img/versal-logo-2.png']
+    };
+
+    populateThenShowModal(body, body.iconssrc);
+
+  });
+
+  $("#gl").click(function() {
+
+    var body = {
+      'title': 'Glass Lewis & Co: Feb 2012 - June 2013',
+      'technologies':'python | mysql | relational database design | data collection & visualization | research | management',
+      'description': "Acted as primary administrator in the development and maintenance of models and database used by research teams for compensation program analysis and data collection for domestic/international markets. Utilized Python/Matplotlib/SQL/Thomson One Banker/Excel to drive data collection, visualization, and efficient reporting.",
+      'link': 'http://www.glasslewis.com/',
+      'iconssrc': ['/img/say-on-pay.jpg']
+    };
+
+    populateThenShowModal(body, body.iconssrc);
+
+  });
+
+  $("#cal").click(function() {
+
+    var body = {
+      'title': 'UC Berkeley',
+      'technologies':'class of 2010',
+      'description': "Received B.A.'s in Applied Mathematics and English.",
+      'link': 'http:blahblah.com',
+      'iconssrc': ['/img/woody-allen.jpg']
     };
 
     populateThenShowModal(body, body.iconssrc);

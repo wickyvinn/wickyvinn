@@ -32,7 +32,7 @@
         <div class="row">
           <span class="col-md-4"><img class="portfolio-icon" id="versal" src="img/versal-logo-1.png"></span>
           <span class="col-md-4"><img class="portfolio-icon" id="gl" src="img/gl-logo.jpg"></span>
-          <span class="col-md-4"><img class="portfolio-icon" id="cal" src="img/cal-logo.png"></span>
+          <span class="col-md-4"><img class="portfolio-icon" id="cal" src="/img/woody-allen.jpg"></span>
         </div>
 
 
@@ -85,7 +85,7 @@
     $('#title').html(body.title);
     $('#technologies').html(body.technologies);
     $('#description').html(body.description);
-    $('#link').html(body.link);
+    $('#link').html(body.linkText).attr('href', body.link);
 
     iconSrcArray = body.iconssrc;
     $('#preview-image').attr("src", iconSrcArray[0])
@@ -100,6 +100,7 @@
       'technologies':'javascript | node.js | mongodb | aws | heroku', 
       'description': 'A cross-platform app. A tinder for rock climbers, of sorts - a GPS-based matching program that matches climbers in the area with other climbers who need a someone to climb with. The only hooking up that happens here, though, is with a quick-draw.',
       'link': 'http://climbr.herokuapp.com/',
+      'linkText':'http://climbr.herokuapp.com/ is best viewed on mobile.',
       'iconssrc': ['/img/climbr-page-1.png', '/img/climbr-page-2.png', '/img/climbr-page-5.png', '/img/climbr-page-3.png', '/img/climbr-page-4.png']
     };
 
@@ -114,6 +115,7 @@
       'technologies':'javascript | node.js | jquery | ajax | heroku',
       'description': "A web application that allows friends to assign secret santas. It includes a random name-drawing generator and an automated email service.",
       'link': 'http://secretsantyclaus.herokuapp.com/',
+      'linkText':'http://secretsantyclaus.herokuapp.com/',
       'iconssrc':['/img/secret-santa-page-3.png', '/img/secret-santa-page-2.png', '/img/secret-santa-page-4.png']
     };
 
@@ -127,6 +129,7 @@
       'technologies':'python | flask | postgres | javascript | web scraping',
       'description': "A web application that produces recommendations on what to wear based on style and your location's weather. You can then shop pieces of the outfit (or variations of pieces that suit you better) via links provided to various ecommerce sites.",
       'link': 'https://github.com/wickyvinn/WhatShouldIWear',
+      'linkText':'View on github',
       'iconssrc': ['/img/wear-page-2.png', '/img/wear-page.png']
     };
 
@@ -141,6 +144,7 @@
       'technologies':'scala | mysql | restful api services | unit testing',
       'description': "Built backend services and RESTful API in scala for an online, interactive course creator. Contributed by adding RESTful endpoints, designing relational data model and identity service, and refactoring backend structure from in-memory model to sql database.",
       'link': 'https://versal.com/',
+      'linkText': 'https://versal.com/',
       'iconssrc': ['/img/versal-logo-2.png']
     };
 
@@ -155,6 +159,7 @@
       'technologies':'python | mysql | relational database design | data collection & visualization | research | management',
       'description': "Acted as primary administrator in the development and maintenance of models and database used by research teams for compensation program analysis and data collection for domestic/international markets. Utilized Python/Matplotlib/SQL/Thomson One Banker/Excel to drive data collection, visualization, and efficient reporting.",
       'link': 'http://www.glasslewis.com/',
+      'linkText': 'http://www.glasslewis.com/',
       'iconssrc': ['/img/say-on-pay.jpg']
     };
 
@@ -166,10 +171,11 @@
 
     var body = {
       'title': 'UC Berkeley',
-      'technologies':'class of 2010',
-      'description': "Received B.A.'s in Applied Mathematics and English.",
-      'link': 'http:blahblah.com',
-      'iconssrc': ['/img/woody-allen.jpg']
+      'technologies':"B.A.'s in Applied Math and English | 2010",
+      'description': "",
+      'link': '/img/woody-essay.pdf',
+      'linkText': 'FASCIST ART IN A POST-MODERN ERA: Woody Allen and the Cult of New York',
+      'iconssrc': ['img/cal-logo.png']
     };
 
     populateThenShowModal(body, body.iconssrc);

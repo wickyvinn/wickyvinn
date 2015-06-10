@@ -50,7 +50,7 @@ a:active { color: #FF00CC; }
   border-radius: 5px;
 }
 
-.preview, #technologies, .modal-title {
+.preview, #technologies, .modal-title, #link {
   text-align: center;
 }
 

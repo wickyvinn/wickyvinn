@@ -1,0 +1,70 @@
+body { font-family: 'Lato', sans-serif;}
+
+@media screen { 
+  #inside-header { padding: 25px;  margin: 0 30% 0 30%; } 
+  .dotted {
+    padding: 2.25em 1.6875em;
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+    background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+    background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+    background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+    -webkit-background-size: 3px 3px;
+    -moz-background-size: 3px 3px;
+    background-size: 3px 3px;
+  } 
+  .sub-header { font-size: 18px;  }
+  .sub-section { margin: 50px 80px 50px 80px; }
+  .skills-right, .skills-description { font-size: 15px;}
+  .job-title, .second { font-size: 14px; }
+  .sub-sub-section { margin-bottom: 20px; }
+
+  #feedback { 
+    position: fixed; 
+    top: 10; 
+    z-index: 999;
+  }
+
+  #feedback a { 
+    padding: 10px;
+    display: block; 
+    background: #FF9900;
+    color: #fff; 
+    text-decoration: none; 
+  }
+
+  #feedback a:hover { 
+    background: #33CCFF; 
+  }
+
+}
+
+@media print { 
+  #inside-header { padding: 5px  } 
+  .sub-section { margin: 10px 20px 10px 20px; }
+  .content { font-size: 11px;}
+  .sub-header, .first { font-size: 13px;}
+  .job-title, .second { font-size: 11px; }
+  .skills-right, .skills-description { font-size: 10px;}
+  .sub-sub-section { margin-bottom: 10px; }
+  .sub-sub-header { font-size: 12px;}
+
+}
+
+#inside-header { background-color: white; text-align: center;}
+
+
+#name { text-transform: uppercase; font-size: 25px; font-family: 'Montserrat', sans-serif; color: #FF9900;}
+#contact { text-transform: uppercase; font-size: 12px; font-family: 'Open Sans', sans-serif; }
+
+.sub-header { text-transform: uppercase; padding-bottom: 10px; font-family: 'Montserrat', sans-serif; color: #33CCFF;}
+.skills-description { text-transform: uppercase; font-family: 'Montserrat', sans-serif;}
+
+.skills-right { font-style: italic; font-family: 'Open Sans', sans-serif; }
+table { width: 100%;}
+.sub-sub-header, .first { font-family: 'Montserrat', sans-serif;}
+.sub-sub-header { color: #FF9900; }
+.job-title, .second { font-family: 'Montserrat', sans-serif; }
+.experience-right { text-align: right; }
+
+.content { font-family: 'Lato', sans-serif; }
+a { color: #33CCFF; text-decoration: none;}

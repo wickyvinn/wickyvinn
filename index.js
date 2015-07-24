@@ -10,8 +10,8 @@ app.get('/', function(req, res) {
   res.render('home.html');
 });
 
-app.get('/contact', function(req, res) {
-  res.render('contact.html');
+app.get('/cv', function(req, res) {
+  res.render('paper-resume.html');
 });
 
 app.get('/about', function(req, res) {

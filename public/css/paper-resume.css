@@ -47,7 +47,7 @@ body { font-family: 'Lato', sans-serif;}
   .skills-right, .skills-description { font-size: 10px;}
   .sub-sub-section { margin-bottom: 10px; }
   .sub-sub-header { font-size: 12px;}
-
+  #feedback { display: none; }
 }
 
 #inside-header { background-color: white; text-align: center;}
